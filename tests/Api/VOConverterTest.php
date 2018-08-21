@@ -24,7 +24,7 @@ class VOConverterTest extends TestCase
             'lastname' => 'Doe',
             'email' => 'john.doe@example.com',
             'phone' => '+48123123123',
-            'ip_address' => '127.0.0.1',
+            'ip' => '127.0.0.1',
         ];
 
         $customer = new Customer(
@@ -34,7 +34,7 @@ class VOConverterTest extends TestCase
             $expected['email'],
             $expected['phone'],
             null,
-            $expected['ip_address']
+            $expected['ip']
         );
 
         $data = VOConverter::convertForRequest($customer);
@@ -73,7 +73,7 @@ class VOConverterTest extends TestCase
             'lastname' => 'Doe',
             'email' => 'john.doe@example.com',
             'phone' => '+48123123123',
-            'ip_address' => '127.0.0.1',
+            'ip' => '127.0.0.1',
             'address_city' => 'Warsaw',
             'address_country' => 'PL',
             'address_line1' => 'Kubusia Puchatka 1',
@@ -98,7 +98,7 @@ class VOConverterTest extends TestCase
             $expected['email'],
             $expected['phone'],
             $address,
-            $expected['ip_address']
+            $expected['ip']
         );
 
         $data = VOConverter::convertForRequest($customer);

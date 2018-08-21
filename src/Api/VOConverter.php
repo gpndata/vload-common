@@ -55,7 +55,7 @@ class VOConverter
             $data['phone'] = $customer->getPhone();
         }
         if (null !== $customer->getIp()) {
-            $data['ip_address'] = $customer->getIp();
+            $data['ip'] = $customer->getIp();
         }
         if (null !== $customer->getAddress()) {
             $address = self::convertForRequest($customer->getAddress());
